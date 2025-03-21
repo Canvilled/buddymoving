@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 @import "tailwindcss" theme(static);
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @source "../views/";
 @source "../../app/";
 
 @theme {
   /*Font setting*/
   --font-heading: "Oswald", "sans-serif";
-  --font-body: "Roboto", "sans-serif";
+  --font-body: "Open Sans", "sans-serif";
   /*Color setting*/
   --color-primary: #3545B0;
   --color-secondary: #FAD20D;
@@ -52,5 +52,9 @@
 @layer base{
   body{
     @apply font-body text-black text-base;
+  }
+
+  .container {
+    @apply max-w-[1360px] mx-auto max-xl:px-2.5;
   }
 }

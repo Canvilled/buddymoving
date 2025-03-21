@@ -6,6 +6,8 @@
 
 namespace App;
 
+use App\Utils\Fields;
+use App\Utils\Shortcodes\Shortcodes;
 use Carbon_Fields\Carbon_Fields;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Vite;
@@ -108,6 +110,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
+        'sub_primary_navigation' => __('Sub Primary Navigation', 'sage'),
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'footer_navigation' => __('Footer Navigation', 'sage'),
         'sub_footer_navigation' => __('Sub Footer Navigation', 'sage'),
@@ -164,6 +167,9 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 
     Carbon_Fields::boot();
+
+    Fields::init();
+    new Shortcodes();
 }, 20);
 
 /**
