@@ -6,9 +6,9 @@
 
 namespace App;
 
+use Carbon_Fields\Carbon_Fields;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Vite;
-
 /**
  * Inject styles into the block editor.
  *
@@ -160,6 +160,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    Carbon_Fields::boot();
 }, 20);
 
 /**
