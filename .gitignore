@@ -4,3 +4,7 @@
 !/public/.gitkeep
 .env
 npm-debug.log
+
+
+.idea
+.vscode
