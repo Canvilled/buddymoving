@@ -40,6 +40,9 @@
   },
   "require": {
     "php": ">=8.2",
+    "htmlburger/carbon-fields": "^3.6",
+    "log1x/poet": "^2.1",
+    "log1x/sage-directives": "^2.0",
     "roots/acorn": "^5.0"
   },
   "require-dev": {
