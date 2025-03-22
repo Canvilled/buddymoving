@@ -145,6 +145,18 @@ add_action('after_setup_theme', function () {
     add_theme_support('responsive-embeds');
 
     /**
+     * Register custom logo field
+     *
+     */
+    add_theme_support('custom-logo', array(
+        'height' => 62,
+        'width' => 210,
+        'flex-height' => true,
+        'flex-width' => true,
+        'header-text' => array('site-title', 'site-description'),
+    ));
+
+    /**
      * Enable HTML5 markup support.
      *
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
