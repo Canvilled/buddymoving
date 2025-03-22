@@ -27,8 +27,13 @@
           </button>
         @endif
         <div class="max-sm:hidden">
-          <x-button tag="a" size="medium" variant="primary" href="/contact">
-            FREE QUOTE
+          <x-button
+            tag="a"
+            size="medium"
+            variant="primary"
+            href="{{carbon_get_theme_option('header_button_url')}}"
+          >
+            {!! carbon_get_theme_option('header_button_text') !!}
             <x-icon-arrow-right class="w-5 h-5" />
           </x-button>
         </div>
