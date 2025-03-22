@@ -8,7 +8,7 @@
           {!! MarkdownRenderer::renderCarbonField('footer_copywriter','theme_options') !!}
         </div>
         @if (has_nav_menu('sub_footer_navigation'))
-          <nav class="nav-sub-footer mx-auto" aria-label="{{ wp_get_nav_menu_name('sub_footer_navigation') }}">
+          <nav class="nav-sub-footer max-lg:mx-auto" aria-label="{{ wp_get_nav_menu_name('sub_footer_navigation') }}">
             {!! wp_nav_menu([
                 'theme_location' => 'sub_footer_navigation',
                 'menu_class' => 'nav text-white flex items-center divide-x divide-white text-small [&_a]:!no-underline [&_li]:px-2 [&_li]:last:pr-0',
