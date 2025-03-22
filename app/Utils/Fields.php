@@ -2,6 +2,7 @@
 namespace App\Utils;
 
 use App\Fields\FieldStrategyInterface;
+use Carbon_Fields\Field;
 use Exception;
 
 class Fields
@@ -72,5 +73,15 @@ class Fields
                 error_log("Failed to register field: {$className}. Error: " . $e->getMessage());
             }
         }
+    }
+
+    public static function add_control_heading(string $field,string $field_name): array
+    {
+        return [
+            Field::make( 'text', $field, __( $field_name ) )
+                 ->set_help_text( 'Use curly braces { } to highlight your word' ),
+            Field::make( 'select', $field.'_tag', __( $field_name.' Tag' ) )
+                 ->add_options('\App\Utils\Helpers::getHeadingTagsChoice')
+        ];
     }
 }
