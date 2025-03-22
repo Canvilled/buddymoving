@@ -20,7 +20,7 @@
      'transparent' => 'bg-transparent'
   };
 
- $classes .= ' !no-underline transition duration-400 rounded-[5px] text-center inline-flex items-center justify-between gap-3';
+ $classes .= ' !no-underline font-heading transition duration-400 rounded-[5px] text-center inline-flex items-center justify-between gap-3';
 @endphp
 
 <{{ $tag }} {{ $attributes->merge(['class' =>  $text_color.' '.$classes.' '.$size_classes]) }}>
