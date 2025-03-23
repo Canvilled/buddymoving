@@ -65,6 +65,6 @@
   }
 
   .container-content {
-    @apply max-w-[1026px] w-full mx-auto max-xl:px-4;
+    @apply max-w-[1041px] w-full mx-auto max-xl:px-4;
   }
 }
