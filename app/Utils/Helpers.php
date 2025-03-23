@@ -19,4 +19,12 @@ class Helpers {
             'span' => __('SPAN', self::TEXT_DOMAIN),
         ];
     }
+
+    public static function getTextAlignment(): array {
+        return [
+            'text-left' => __('Left', self::TEXT_DOMAIN),
+            'text-center' => __('Center', self::TEXT_DOMAIN),
+            'text-right' => __('Right', self::TEXT_DOMAIN),
+        ];
+    }
 }
