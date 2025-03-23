@@ -81,7 +81,9 @@ class Fields
             Field::make( 'text', $field, __( $field_name ) )
                  ->set_help_text( 'Use curly braces { } to highlight your word' ),
             Field::make( 'select', $field.'_tag', __( $field_name.' Tag' ) )
-                 ->add_options('\App\Utils\Helpers::getHeadingTagsChoice')
+                 ->add_options('\App\Utils\Helpers::getHeadingTagsChoice'),
+            Field::make( 'select', $field.'_alignment', __( $field_name.' Aligment' ) )
+                 ->add_options('\App\Utils\Helpers::getTextAlignment')
         ];
     }
 }
