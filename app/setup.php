@@ -47,7 +47,7 @@ add_filter('admin_head', function () {
     }
 
     echo Vite::withEntryPoints([
-        'resources/js/editor.js',
+        'resources/scripts/editor.ts',
     ])->toHtml();
 });
 

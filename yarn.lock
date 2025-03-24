@@ -1465,6 +1465,7 @@ __metadata:
     "@roots/vite-plugin": "npm:^1.0.2"
     "@tailwindcss/vite": "npm:^4.0.9"
     laravel-vite-plugin: "npm:^1.2.0"
+    swiper: "npm:11.2.4"
     tailwindcss: "npm:^4.0.9"
     vite: "npm:^6.2.0"
   languageName: unknown
@@ -1590,6 +1591,13 @@ __metadata:
   dependencies:
     ansi-regex: "npm:^6.0.1"
   checksum: 10c0/a198c3762e8832505328cbf9e8c8381de14a4fa50a4f9b2160138158ea88c0f5549fb50cb13c651c3088f47e63a108b34622ec18c0499b6c8c3a5ddf6b305ac4
+  languageName: node
+  linkType: hard
+
+"swiper@npm:11.2.4":
+  version: 11.2.4
+  resolution: "swiper@npm:11.2.4"
+  checksum: 10c0/911c405a2d7feae9ac59d8b6683c40e50f6f5be8ca5c5e44673647c37e319a564417b813dc79a09da034e8fe927b2883253fe72cd8efecfcc09247f669fd5a30
   languageName: node
   linkType: hard
 
