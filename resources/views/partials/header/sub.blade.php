@@ -10,7 +10,7 @@
         <nav class="nav-sub-primary" aria-label="{{ wp_get_nav_menu_name('sub_primary_navigation') }}">
           {!! wp_nav_menu([
               'theme_location' => 'sub_primary_navigation',
-              'menu_class' => 'nav text-white font-heading flex gap-[68px]',
+              'menu_class' => 'nav text-white font-heading flex gap-[68px] max-sm:gap-[50px]',
               'echo' => false,
               'walker' => $walker
               ]) !!}

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "resources",
+    "esModuleInterop": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "esnext",
+    /**
+     * Resolve aliases
+     */
+    "paths": {
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["images/*"],
+      "@scripts/*": ["scripts/*"],
+      "@styles/*": ["styles/*"]
+    },
+    /**
+     * Type definitions
+     */
+    "types": [
+      "@roots/sage"
+    ],
+  },
+  "include": ["resources"],
+  "exclude": ["node_modules", "public"]
+}

@@ -10,9 +10,9 @@ export default defineConfig({
     laravel({
       input: [
         'resources/css/app.css',
-        'resources/js/app.js',
+        'resources/scripts/app.ts',
         'resources/css/editor.css',
-        'resources/js/editor.js',
+        'resources/scripts/editor.ts',
       ],
       refresh: true,
     }),
@@ -30,7 +30,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@scripts': '/resources/js',
+      '@scripts': '/resources/scripts',
       '@styles': '/resources/css',
       '@fonts': '/resources/fonts',
       '@images': '/resources/images',

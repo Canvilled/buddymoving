@@ -1,3 +1,21 @@
+@php
+$options = [
+	'slidesPerView' => 1,
+       'loop' => true,
+       'breakpoints' => [
+           640 => [
+               'slidesPerView' => 1,
+           ],
+           768 => [
+               'slidesPerView' => 1,
+           ],
+           1024 => [
+               'slidesPerView' => 1,
+           ],
+       ],
+
+];
+@endphp
 <div class="testimonial-list__block section">
   <div class="container-content">
     <div class="flex flex-col gap-6">
@@ -9,11 +27,17 @@
       @query([
           'post_type' => 'testimonial'
       ])
-      @hasposts
-        @posts
-          <x-testimonal-item name="{{get_the_title()}}" content="{{get_the_content()}}" location="{{carbon_get_the_post_meta('location')}}" />
-        @endposts
-      @endhasposts
+      <div class="max-w-[514px] mx-auto max-sm:max-w-full">
+          @hasposts
+          <x-slider.wrapper  :options="$options">
+              @posts
+              <x-slider.slide>
+                  <x-testimonal-item name="{{get_the_title()}}" content="{{get_the_content()}}" location="{{carbon_get_the_post_meta('location')}}" />
+              </x-slider.slide>
+              @endposts
+          </x-slider.wrapper>
+          @endhasposts
+      </div>
     </div>
   </div>
 </div>
