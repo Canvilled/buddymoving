@@ -1,5 +1,5 @@
 <div class="text-image__block section">
-    <div class="container-content">
+    <div class="container">
         <div class="grid grid-cols-2 max-sm:grid-cols-1 gap-5 max-sm:gap-20">
           <div>
             {!! wp_get_attachment_image($fields['image'],'full',null,[ 'loading' => 'lazy','class' => 'w-full h-auto'])!!}
