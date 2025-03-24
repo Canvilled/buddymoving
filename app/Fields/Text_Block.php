@@ -4,13 +4,13 @@ namespace App\Fields;
 use Carbon_Fields\Field;
 use Carbon_Fields\Block;
 
-class Text implements FieldStrategyInterface {
+class Text_Block implements FieldStrategyInterface {
     public function register(): void {
         add_action( 'carbon_fields_register_fields', [$this, 'attach_text_field'] );
     }
 
     public function attach_text_field(): void {
-        Block::make( __( 'text' ) )
+        Block::make( __( 'Text Block' ) )
              ->add_fields(array_merge(
                  \App\Utils\Fields::add_control_heading('heading', 'Heading'),
                  [
@@ -18,7 +18,7 @@ class Text implements FieldStrategyInterface {
                  ]
              ))
              ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
-                 echo view('sections.text', [
+                 echo view('sections.text-block', [
                      'fields' => $fields,
                      'attributes' => $attributes,
                      'inner_blocks' => $inner_blocks,
