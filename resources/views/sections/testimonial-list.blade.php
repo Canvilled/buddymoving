@@ -1,4 +1,4 @@
-<div class="testimonial-list__block">
+<div class="testimonial-list__block section">
   <div class="container-content">
     <div class="flex flex-col gap-6">
       @if($fields['heading'])
