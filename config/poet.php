@@ -24,6 +24,17 @@ return [
                 'plural' => 'Testimonials',
             ],
         ],
+        'video' => [
+            'enter_title_here' => 'Enter video title',
+            'menu_icon' => 'dashicons-format-video',
+            'supports' => ['title', 'author', 'revisions', 'thumbnail'],
+            'show_in_rest' => false,
+            'has_archive' => false,
+            'labels' => [
+                'singular' => 'Video',
+                'plural' => 'Videos',
+            ],
+        ],
     ],
 
     /*
