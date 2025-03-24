@@ -53,6 +53,12 @@
   body{
     @apply font-body text-black text-base;
   }
+  .container-content-wrap ul{
+    @apply pl-10 list-disc;
+  }
+  .container-content-wrap a:where(:not(.wp-element-button)){
+    @apply no-underline text-secondary;
+  }
 }
 
 @layer utilities {
@@ -67,4 +73,5 @@
   .container-content {
     @apply max-w-[1041px] w-full mx-auto max-xl:px-4;
   }
+
 }
