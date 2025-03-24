@@ -10,6 +10,7 @@ class Video_Listing implements FieldStrategyInterface {
 
     public function attach_video_list_field(): void {
         Block::make( __( 'Videos' ) )
+            ->add_fields([])
              ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
                  echo view('sections.video-list', [
                      'fields' => $fields,
