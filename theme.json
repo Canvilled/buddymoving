@@ -22,6 +22,10 @@
         "line-height": {}
       }
     },
+    "layout": {
+      "contentSize": "1041px",
+      "wideSize": "1152px"
+    },
     "spacing": {
       "padding": true,
       "units": ["px", "%", "em", "rem", "vw", "vh"]
