@@ -64,14 +64,14 @@ class SliderInit extends MainClass {
     if (getAttributesSelector.pagination) {
       arrayModules.push(Pagination);
       swiperOptions.pagination = {
-        el: this.selector.querySelector('.swiper-pagination') as HTMLElement,
+        el: this.selector.parentElement.querySelector('.swiper-pagination') as HTMLElement,
       };
     }
     if (getAttributesSelector.navigation) {
       arrayModules.push(Navigation);
       swiperOptions.navigation = {
-        nextEl: this.selector.querySelector('.swiper-button-next') as HTMLElement,
-        prevEl: this.selector.querySelector('.swiper-button-prev') as HTMLElement,
+        nextEl: this.selector.parentElement.querySelector('.swiper-button-next') as HTMLElement,
+        prevEl: this.selector.parentElement.querySelector('.swiper-button-prev') as HTMLElement,
       };
     }
     if (
@@ -97,12 +97,7 @@ class SliderInit extends MainClass {
       init: true,
     });
 
-    console.log(this.selector)
-
-
-    console.log(swiperOptions)
-    SwiperInit.on('init', () => {
-    });
+    SwiperInit.on('init', () => {});
 
     SwiperInit.init();
 
@@ -115,11 +110,11 @@ class SliderInit extends MainClass {
     }
 
     // NOTE: add event for button navigation
-    const _btnPrev = this.selector.querySelector(
+    const _btnPrev = this.selector.parentElement.querySelector(
       '.swiper-button-prev'
     ) as HTMLElement;
 
-    const _btnNext = this.selector.querySelector(
+    const _btnNext = this.selector.parentElement.querySelector(
       '.swiper-button-next'
     ) as HTMLElement;
 
