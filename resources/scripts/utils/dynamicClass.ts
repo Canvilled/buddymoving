@@ -1,5 +1,6 @@
 import Slider from "@scripts/features/Slider";
 import Header from "@scripts/features/Header";
+import Video from "@scripts/features/Video";
 
 interface DYNAMIC_CLASSES_PARAMS {
     className: string
@@ -15,6 +16,7 @@ interface ClassConstructor {
 const CLASSES: { [key: string]: ClassConstructor } = {
     Slider,
     Header,
+    Video
 }
 
 class DynamicClass {

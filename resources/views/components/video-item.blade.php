@@ -3,7 +3,7 @@
   'video' => ''
 ])
 
-<div class="video-item rounded-[20px] overflow-hidden">
+<div class="video-item rounded-[20px] overflow-hidden cursor-pointer" data-call="Video">
   <div class="relative">
      <div class="video-item__play-btn w-[60px] h-[60px] rounded-full absolute z-10 text-primary bg-white top-5 right-5">
         <x-icon-circle-play class="w-full h-full" />

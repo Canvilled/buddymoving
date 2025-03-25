@@ -2,6 +2,7 @@
 $options = [
 	'slidesPerView' => 1,
        'loop' => true,
+       'navigation' => true,
        'breakpoints' => [
            640 => [
                'slidesPerView' => 1,
@@ -27,7 +28,7 @@ $options = [
       @query([
           'post_type' => 'testimonial'
       ])
-      <div class="max-w-[514px] mx-auto max-sm:max-w-full">
+      <div class="max-w-[514px] mx-auto max-sm:max-w-full max-sm:w-[calc(100%_-_60px)]">
           @hasposts
           <x-slider.wrapper  :options="$options">
               @posts
