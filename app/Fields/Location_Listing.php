@@ -11,6 +11,7 @@ class Location_Listing implements FieldStrategyInterface {
 
     public function attach_location_list_field(): void {
         Block::make( __( 'Locations' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
                  \App\Utils\Fields::add_control_heading('heading', 'Heading'),
                  [

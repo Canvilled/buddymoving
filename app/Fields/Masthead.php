@@ -11,6 +11,7 @@ class Masthead implements FieldStrategyInterface {
 
     public function attach_masthead_field(): void {
         Block::make( __( 'Masthead' ) )
+            ->set_mode('preview')
             ->add_fields(array_merge(
                 \App\Utils\Fields::add_control_heading('hero', 'Hero'),
                 [

@@ -5,7 +5,7 @@
   $walker = new Footer();
 @endphp
 <div class="bg-gray py-9 max-sm:py-[18px]">
-  <div class="container">
+  <div class="container-content-big">
     <div class="grid grid-cols-4 max-sm:grid-cols-1 gap-4">
       <div class="flex flex-col gap-5">
         <x-typo tag="h3" class="text-subheading font-heading text-primary">

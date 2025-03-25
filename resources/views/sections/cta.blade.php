@@ -1,5 +1,5 @@
 <div class="cta__block mt-[50px] bg-[linear-gradient(140deg,#2B3991_52%,_#F5F5F58F_32%)] py-[50px] max-lg:py-4 max-lg:bg-[linear-gradient(180deg,_#2B3991_50%,_#F5F5F58F_30%)]">
-    <div class="container">
+    <div class="container-content-big">
         <div class="grid grid-cols-2 max-lg:grid-cols-1 gap-12">
           @if($fields['heading'])
             <x-typo :tag="$fields['heading_tag']" class="text-subheading max-sm:font-medium max-lg:text-center max-sm:text-medium text-secondary font-heading" :alignment="$fields['heading_alignment'] ?? 'text-center'">
@@ -7,7 +7,7 @@
             </x-typo>
           @endif
           <div class="cta__btns">
-              <div class="flex items-center justify-center gap-12">
+              <div class="flex items-center justify-end gap-12">
                 <x-button
                   tag="a"
                   size="medium"
