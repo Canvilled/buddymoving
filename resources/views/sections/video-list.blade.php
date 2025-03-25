@@ -22,7 +22,7 @@
 @endphp
 
 <div class="video-listing__block section">
-    <div class="container">
+    <div class="container-content-big">
         @query([
         'post_type' => 'video'
         ])

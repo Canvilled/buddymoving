@@ -2,7 +2,7 @@
   use App\Utils\MarkdownRenderer;
 @endphp
 <div class="bg-primary py-2.5 *:text-white ![&_a]:text-secondary shadow-[0px_0px_10px_0px_rgba(0,0,0,0.5)]">
-  <div class="container">
+  <div class="container-content-big">
     <div class="flex items-center justify-between gap-y-5 flex-wrap max-xl:text-center">
         <div>
           {!! MarkdownRenderer::renderCarbonField('footer_copywriter','theme_options') !!}

@@ -12,6 +12,7 @@ class Divider implements FieldStrategyInterface {
     public function attach_divider_field(): void {
         Block::make( __( 'Divider' ) )
              ->add_fields([])
+             ->set_mode('preview')
              ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
                  echo view('components.divider', [
                      'fields' => $fields,

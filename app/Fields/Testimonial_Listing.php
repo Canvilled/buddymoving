@@ -11,6 +11,7 @@ class Testimonial_Listing implements FieldStrategyInterface {
 
     public function attach_testimonial_list_field(): void {
         Block::make( __( 'Testimonials' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
                  \App\Utils\Fields::add_control_heading('heading', 'Heading'),
              ))

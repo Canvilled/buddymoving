@@ -1,5 +1,5 @@
 <div class="location-list__block section">
-    <div class="container container-content-wrap">
+    <div class="container-content-big container-content-wrap">
       <div class="flex flex-col gap-4">
         @if($fields['heading'])
           <x-typo :tag="$fields['heading_tag']" class="*:text-heading-title *:font-bold  [&_a]:!no-underline" :alignment="$fields['heading_alignment'] ?? 'text-center'">

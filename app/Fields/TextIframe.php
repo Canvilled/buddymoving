@@ -11,6 +11,7 @@ class TextIframe implements FieldStrategyInterface {
 
     public function attach_text_iframe_field(): void {
         Block::make( __( 'Text Iframe' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
                  [
                      Field::make( 'textarea', 'iframe', 'Iframe' ),

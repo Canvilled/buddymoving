@@ -11,6 +11,7 @@ class Service_Listing implements FieldStrategyInterface {
 
     public function attach_service_list_field(): void {
         Block::make( __( 'Services' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
                  \App\Utils\Fields::add_control_heading('heading', 'Heading'),
                  [

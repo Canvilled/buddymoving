@@ -11,6 +11,7 @@ class TextImage implements FieldStrategyInterface {
 
     public function attach_text_image_field(): void {
         Block::make( __( 'Text Image' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
 				 [
 					 Field::make( 'image', 'image', 'Image' ),

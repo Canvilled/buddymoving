@@ -11,6 +11,7 @@ class New_Cta_Block implements FieldStrategyInterface {
 
     public function attach_cta_field(): void {
         Block::make( __( 'New CTA Block' ) )
+            ->set_mode('preview')
              ->add_fields(array_merge(
                  \App\Utils\Fields::add_control_heading('heading', 'Heading'),
                  [
