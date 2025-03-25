@@ -12,26 +12,32 @@ class Header extends MainClass {
   onNavClick(e: Event) {
     e.preventDefault()
     const nav = this.nav;
-    this.navBtn.setAttribute('aria-expanded', 'true');
-    nav.classList.add('is-menu-active');
-    nav.classList.remove('is-menu-inactive');
+    this.navBtn.querySelectorAll('i').forEach(item => {
+      item.classList.toggle('hidden')
+      item.classList.toggle('block')
+    })
+    this.navBtn.toggleAttribute('aria-expanded');
+    nav.classList.toggle('is-menu-active');
+    nav.classList.toggle('is-menu-inactive');
   }
 
-  onCloseClick(e: Event) {
-    e.preventDefault()
-    const nav = this.nav;
-    this.navBtn.setAttribute('aria-expanded', 'false');
-    nav.classList.remove('is-menu-active');
-    nav.classList.add('is-menu-inactive');
+  onHandleChildren(){
+    const childrenMenu = this.selector.querySelectorAll('.menu-item-has-children');
+    childrenMenu.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        item.classList.toggle('bg-secondary');
+        item.querySelector('ul').classList.toggle('max-xl:h-[0]')
+      })
+    })
   }
 
   init() {
     this.navBtn = this.selector.querySelector('[aria-label="Toggle Menu"]');
     const controlled = this.navBtn.getAttribute('aria-controls');
     this.nav = this.selector.querySelector('[aria-label="'+controlled+'"]');
-    const closeBtn = this.nav.querySelector('[aria-label="Close Menu"]');
-    closeBtn.addEventListener('click', this.onCloseClick.bind(this));
     this.navBtn.addEventListener('click', this.onNavClick.bind(this));
+    this.onHandleChildren()
   }
 }
 

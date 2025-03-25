@@ -5,7 +5,6 @@ import Main from "@scripts/main";
  * Application entrypoint
  */
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Huy')
   new Main();
 });
 

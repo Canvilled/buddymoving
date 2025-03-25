@@ -2,7 +2,7 @@
   use App\Menu_Walkers\Header;
   $walker = new Header();
 @endphp
-<div class="py-6">
+<div class="py-6" data-call="Header">
   <div class="container">
     <div class="flex justify-between items-center">
       <div class="">
@@ -14,16 +14,25 @@
       </div>
       <div class="flex items-center justify-end gap-20">
         @if (has_nav_menu('primary_navigation'))
-          <nav class="nav-primary max-xl:hidden relative z-50" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+          <nav
+            class="nav-primary relative z-50 is-menu-inactive"
+            aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}"
+            aria-expanded="false"
+          >
             {!! wp_nav_menu([
                 'theme_location' => 'primary_navigation',
-                'menu_class' => 'nav font-heading flex item-center',
+                'menu_class' => 'nav font-heading flex item-center max-xl:divide-y max-xl:divide-white ',
                 'echo' => false,
                 'walker' => $walker
                 ]) !!}
           </nav>
-          <button class="hidden max-xl:inline-flex bg-primary cursor-pointer w-10 h-10 rounded-[5px] items-center justify-center" aria-label="menu">
-            <i><x-icon-bars class="w-6 h-6 text-white" /></i>
+          <button
+            class="hidden max-xl:inline-flex bg-primary cursor-pointer w-10 h-10 rounded-[5px] items-center justify-center"
+            aria-label="Toggle Menu"
+            aria-controls="{{ wp_get_nav_menu_name('primary_navigation') }}"
+          >
+            <i class="block"><x-icon-bars class="w-6 h-6 text-white" /></i>
+            <i class="hidden"><x-icon-mark class="w-6 h-6 text-white" /></i>
           </button>
         @endif
         <div class="max-sm:hidden">
